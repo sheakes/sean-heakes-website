@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Evens - Vasteminimaology</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = [
+                "images/research_figure.jpg",
+                "images/research_figure2.jpg",
+                "images/research_figure3.jpg"
+            ];
+            let currentImageIndex = 0;
+            const imgElement = document.getElementById("researchImage");
+
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                imgElement.src = images[currentImageIndex];
+            }
+
+            setInterval(changeImage, 3000); // Change image every 3 seconds
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Dr. John Evens</h1>
+        <h2>Pioneering Researcher in Vasteminimaology</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome</h2>
+            <p>Dr. John Evens is a world-renowned scholar in the field of Vasteminimaology, a discipline that has challenged the very foundation of modern academia. His groundbreaking research has led to paradigm-shifting discoveries, unlocking mysteries that have puzzled scholars for centuries.</p>
+        </section>
+
+        <section>
+            <h2>Biography</h2>
+            <p>Born in the remote highlands of an undisclosed nation, John Evens was orphaned at a young age and raised by a reclusive order of monks who imparted to him ancient knowledge lost to modern science. His innate genius became evident when, at the age of seven, he reconstructed an ancient astrolabe from scattered fragments.</p>
+            <p>By the age of twelve, he had deciphered forgotten scripts describing vasteminimal energy fields. Forced into exile after his discoveries disrupted religious traditions, he wandered across continents, absorbing knowledge from underground scholars, rogue physicists, and forgotten libraries.</p>
+            <p>Despite being denied formal education, he infiltrated academic circles by publishing anonymously under multiple aliases. When his identity was finally revealed, he was offered a full professorship without ever having attended university. His controversial theories were ridiculed at first, but experimental evidence soon vindicated his work.</p>
+            <p>Dr. Evens' research has survived assassination attempts, political sabotage, and even accusations of fabricating results—only for competing scholars to later confirm his findings as revolutionary.</p>
+        </section>
+
+        <section>
+            <h2>Featured Research</h2>
+            <figure>
+                <img id="researchImage" src="images/research_figure.jpg" alt="Groundbreaking research in Vasteminimaology">
+                <figcaption>Dr. Evens' latest findings on the vasteminimal substructures in interdimensional flux patterns.</figcaption>
+            </figure>
+            <p>His latest work explores the intricate relationships between vasteminimal anomalies and quantum lattice distortions, fundamentally redefining our understanding of sub-temporal matter configurations.</p>
+        </section>
+
+        <section>
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>"The Vasteminimal Conjecture: A New Frontier" - Journal of Theoretical Phenomena, 2023</li>
+                <li>"Transdimensional Echoes: Mapping the Unseen" - Proceedings of the Intergalactic Symposium, 2022</li>
+                <li>"Linguistic Patterns in Non-Linear Quantum Textures" - Advanced Metaphysics Review, 2021</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dr. John Evens. All rights reserved.</p>
+    </footer>
+</body>
+</html>
