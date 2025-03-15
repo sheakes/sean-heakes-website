@@ -5,20 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sean Heakes - Astronomy & Research</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+            overflow-y: auto;
+            background-color: white;
+            position: relative;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            text-align: left;
+            cursor: pointer;
+            position: relative;
+
+        }
+        .profile-image {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+                    }
+        .click-hint {
+            position: absolute;
+            top: 100px;
+            left: 500px;
+            transform: translateY(-50%);
+            background: yellow;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+            animation: fadeOut 5s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+            color: black;
+        }
+        h2 {
+            font-size: 24px;
+            margin: 5px 0;
+            color: black;
+        }
+        .about-text, .welcome-text {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: black;
+        }
+        .contact {
+            margin-top: 40px;
+            color: black;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+            display: inline-block;
+        }
+        nav ul li a {
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: blue;
+        }
+        .star {
+            position: absolute;
+            color: gold;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .black-hole {
+            position: absolute;
+            width: 0;
+            height: 0;
+            background-color: black;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s, width 0.5s, height 0.5s;
+        }
+    </style>
 </head>
 <body>
+    <div id="blackHole" class="black-hole"></div>
     <header>
-        <h1>Sean Heakes</h1>
-        <h2>Astronomer | Researcher | Explorer</h2>
+        <div class="header-container" onclick="toggleStarOrbits()">
+            <img src="images/profile.jpg" alt="Profile Picture" class="profile-image">
+            <div class="click-hint">Click here!</div>
+
+            <div>
+                <h1>Sean Heakes</h1>
+                <h2>Astronomer | Researcher | Explorer</h2>
+            </div>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="cv.html">CV</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -26,12 +129,125 @@
     <main>
         <section>
             <h2>Welcome</h2>
-            <p>Welcome to my personal academic website, where I showcase my research, projects, and journey in astronomy and beyond. My passion lies in exploring the universe, both scientifically and through personal adventures.</p>
+            <p class="welcome-text">Welcome to my personal website, where I showcase my research, projects, and journey in astronomy and beyond.</p>
+        </section>
+
+        <section class="about-container">
+            <h2>About Me</h2>
+            <p class="about-text">I'm Sean Heakes, an aspiring astronomer and researcher with a passion for atmospheric modeling, radio astronomy, and building both radio and optical telescopes. My academic journey has been shaped by my love for exploration and hands-on problem-solving.</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to collaborate or discuss research, feel free to reach out via email: <strong>seanebyheakes1(at)gmail.com</strong></p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Sean Heakes. All rights reserved.</p>
     </footer>
+
+    <script>
+        let stars = [];
+        const numStars = 7;
+        const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        const blackHole = document.getElementById("blackHole");
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const G_central = 0.05; // Adjustable gravitational constant for central attraction
+        const G = 0.05; // Gravitational constant for simulation purposes
+        let orbitsActive = false;
+        let intervalId;
+        const blackHoleThreshold = 50;
+
+        function createStar(radius, angle) {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            star.innerHTML = "★";
+            document.body.appendChild(star);
+            star.radius = radius;
+            star.angle = angle;
+            star.mass = Math.random() * 2 + 1; // Random mass between 1 and 3
+            let size = star.mass * 20; // Adjust star size based on mass
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.fontSize = `${size}px`;
+            star.vx = Math.cos(angle) * Math.sqrt(500 / (radius * radius * radius));
+            star.vy = Math.sin(angle) * Math.sqrt(500 / (radius * radius * radius));
+            star.style.color = colors[Math.floor(Math.random() * colors.length)];
+            star.style.display = "block";
+            star.addEventListener("click", function(event) {
+                let impulse = 0.02;
+                let starRect = star.getBoundingClientRect();
+                let clickX = event.clientX - starRect.left - starRect.width / 2;
+                let clickY = event.clientY - starRect.top - starRect.height / 2;
+                let angle = Math.atan2(clickY, clickX);
+                star.vx += impulse * Math.cos(angle);
+                star.vy += impulse * Math.sin(angle);
+            });
+            stars.push(star);
+        }
+        
+        function applyGravity() {
+            for (let i = 0; i < stars.length; i++) {
+                for (let j = i + 1; j < stars.length; j++) {
+                    let star1 = stars[i];
+                    let star2 = stars[j];
+                    let dx = star2.radius * Math.cos(star2.angle) - star1.radius * Math.cos(star1.angle);
+                    let dy = star2.radius * Math.sin(star2.angle) - star1.radius * Math.sin(star1.angle);
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    let force = (G * star1.mass * star2.mass) / (distance * distance + 0.1);
+                    let fx = force * dx / distance;
+                    let fy = force * dy / distance;
+                    star1.vx += fx / star1.mass;
+                    star1.vy += fy / star1.mass;
+                    star2.vx -= fx / star2.mass;
+                    star2.vy -= fy / star2.mass;
+                }
+            }
+        }
+
+        function moveStars() {
+            applyGravity();
+            for (let i = stars.length - 1; i >= 0; i--) {
+                let star = stars[i];
+                star.radius += star.vx;
+                star.angle += star.vy;
+                let x = centerX + star.radius * Math.cos(star.angle);
+                let y = centerY + star.radius * Math.sin(star.angle);
+                star.style.left = x + "px";
+                star.style.top = y + "px";
+                let distanceToCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+                if (distanceToCenter < blackHoleThreshold) {
+                    blackHole.style.left = centerX - 50 + "px";
+                    blackHole.style.top = centerY - 50 + "px";
+                    blackHole.style.width = "100px";
+                    blackHole.style.height = "100px";
+                    blackHole.style.opacity = 1;
+                    setTimeout(() => {
+                        blackHole.style.opacity = 0;
+                        blackHole.style.width = "0";
+                        blackHole.style.height = "0";
+                    }, 1000);
+                    star.remove();
+                    stars.splice(i, 1);
+                }
+            }
+        }
+              function toggleStarOrbits() {
+            if (orbitsActive) {
+                document.querySelectorAll(".star").forEach(star => star.remove());
+                stars = [];
+                clearInterval(intervalId);
+                orbitsActive = false;
+            } else {
+                orbitsActive = true;
+                for (let i = 0; i < numStars; i++) {
+                    createStar(100 + i * 50, Math.PI / 4);
+                }
+                intervalId = setInterval(moveStars, 30);
+            }
+        }
+    </script>
 </body>
 </html>

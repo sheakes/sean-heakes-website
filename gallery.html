@@ -1,17 +1,77 @@
-<!-- Gallery Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Sean Heakes</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            line-height: 1.8;
+            margin: 20px;
+            text-align: center;
+            overflow-y: auto; /* Enables vertical scrolling */
+        }
+        h1 {
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 60px; /* Adds more spacing between sections */
+        }
+        figure {
+            margin: 40px auto;
+            max-width: 500px; /* Reduce max width of images */
+        }
+        img {
+            width: 100%; /* Ensure images scale properly */
+            max-width: 500px; /* Shrink images further */
+            height: auto;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 25px;
+            background: #f4f4f4;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Gallery</h1>
     </header>
     <main>
-        <p>A collection of research visuals and travel photography.</p>
+        <section>
+            <h2>Research and Travel Photography</h2>
+            <figure>
+                <img src="images/research_figure1.jpg" alt="Research image 1">
+                <figcaption>Analysis of spectral line data in radio astronomy.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/research_figure2.jpg" alt="Research image 2">
+                <figcaption>Experimental setup for atmospheric modeling.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/research_figure3.jpg" alt="Research image 3">
+                <figcaption>Fieldwork observations from a remote observatory.</figcaption>
+            </figure>
+        </section>
     </main>
+    <footer>
+        <p>&copy; 2025 Sean Heakes. All rights reserved.</p>
+    </footer>
 </body>
 </html>
