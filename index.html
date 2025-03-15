@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Evens - Vasteminimaology</title>
+    <title>Sean Heakes - Astronomy & Research</title>
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const images = [
-                "images/research_figure.jpg",
-                "images/research_figure2.jpg",
-                "images/research_figure3.jpg"
+                "images/research_figure1.png",
+                "images/research_figure2.png",
+                "images/research_figure3.png",
+                "images/travel_photo1.png",
+                "images/travel_photo2.png"
             ];
             let currentImageIndex = 0;
-            const imgElement = document.getElementById("researchImage");
+            const imgElement = document.getElementById("galleryImage");
 
             function changeImage() {
                 currentImageIndex = (currentImageIndex + 1) % images.length;
@@ -26,15 +28,16 @@
 </head>
 <body>
     <header>
-        <h1>Dr. John Evens</h1>
-        <h2>Pioneering Researcher in Vasteminimaology</h2>
+        <h1>Sean Heakes</h1>
+        <h2>Astronomer | Researcher | Explorer</h2>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="biography.html">Biography</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="publications.html">Publications</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="cv.html">CV</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="research.html">Research</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -43,38 +46,57 @@
     <main>
         <section>
             <h2>Welcome</h2>
-            <p>Dr. John Evens is a world-renowned scholar in the field of Vasteminimaology, a discipline that has challenged the very foundation of modern academia. His groundbreaking research has led to paradigm-shifting discoveries, unlocking mysteries that have puzzled scholars for centuries.</p>
+            <p>Welcome to my personal academic website, where I showcase my research, projects, and journey in astronomy and beyond. My passion lies in exploring the universe, both scientifically and through personal adventures.</p>
         </section>
 
         <section>
-            <h2>Biography</h2>
-            <p>Born in the remote highlands of an undisclosed nation, John Evens was orphaned at a young age and raised by a reclusive order of monks who imparted to him ancient knowledge lost to modern science. His innate genius became evident when, at the age of seven, he reconstructed an ancient astrolabe from scattered fragments.</p>
-            <p>By the age of twelve, he had deciphered forgotten scripts describing vasteminimal energy fields. Forced into exile after his discoveries disrupted religious traditions, he wandered across continents, absorbing knowledge from underground scholars, rogue physicists, and forgotten libraries.</p>
-            <p>Despite being denied formal education, he infiltrated academic circles by publishing anonymously under multiple aliases. When his identity was finally revealed, he was offered a full professorship without ever having attended university. His controversial theories were ridiculed at first, but experimental evidence soon vindicated his work.</p>
-            <p>Dr. Evens' research has survived assassination attempts, political sabotage, and even accusations of fabricating results—only for competing scholars to later confirm his findings as revolutionary.</p>
+            <h2>About Me</h2>
+            <p>I'm Sean Heakes, an aspiring astronomer and researcher currently pursuing a Bachelor of Science degree in Astronomy. My academic path has been anything but traditional—I’ve spent years traveling the world, working odd jobs, and tree planting to support my studies. These experiences have shaped my approach to research, blending hands-on problem-solving with rigorous scientific inquiry.</p>
+            <p>My interests lie in atmospheric modeling, spectral line absorption, and radio astronomy. Currently, I'm involved in research at the Dominion Radio Astrophysical Observatory, where I work on spectral data processing and drone photogrammetry operations. In addition to my academic pursuits, I have a deep fascination with engineering, programming, and practical machine work.</p>
         </section>
 
         <section>
-            <h2>Featured Research</h2>
-            <figure>
-                <img id="researchImage" src="images/research_figure.jpg" alt="Groundbreaking research in Vasteminimaology">
-                <figcaption>Dr. Evens' latest findings on the vasteminimal substructures in interdimensional flux patterns.</figcaption>
-            </figure>
-            <p>His latest work explores the intricate relationships between vasteminimal anomalies and quantum lattice distortions, fundamentally redefining our understanding of sub-temporal matter configurations.</p>
-        </section>
-
-        <section>
-            <h2>Selected Publications</h2>
+            <h2>Projects</h2>
+            <p>Some of my notable projects include:</p>
             <ul>
-                <li>"The Vasteminimal Conjecture: A New Frontier" - Journal of Theoretical Phenomena, 2023</li>
-                <li>"Transdimensional Echoes: Mapping the Unseen" - Proceedings of the Intergalactic Symposium, 2022</li>
-                <li>"Linguistic Patterns in Non-Linear Quantum Textures" - Advanced Metaphysics Review, 2021</li>
+                <li>Developing spectral analysis tools for atmospheric modeling.</li>
+                <li>Processing FITS data cubes and working with HEALPix maps.</li>
+                <li>Contributing to drone-based photogrammetry for radio telescope calibration.</li>
+                <li>Designing and building a personal liquid propellant rocket.</li>
             </ul>
+        </section>
+
+        <section>
+            <h2>CV</h2>
+            <p>You can download my latest CV <a href="cv.pdf">here</a>. It details my academic achievements, research experience, and technical skills.</p>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <figure>
+                <img id="galleryImage" src="images/travel_photo1.png" alt="Personal and research photography">
+                <figcaption>A selection of research images and personal travel photography.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Research</h2>
+            <p>My research focuses on atmospheric spectral modeling, signal processing in radio astronomy, and applied engineering for observational astronomy. Some of my most recent work includes:</p>
+            <ul>
+                <li>Analyzing the moon's radio brightness temperature variations.</li>
+                <li>Improving algorithms for spectral line data extraction.</li>
+                <li>Exploring novel approaches to interferometric imaging.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>If you'd like to collaborate or discuss research, feel free to reach out via email: <a href="mailto:sean.heakes@email.com">sean.heakes@email.com</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Dr. John Evens. All rights reserved.</p>
+        <p>&copy; 2025 Sean Heakes. All rights reserved.</p>
     </footer>
 </body>
 </html>
