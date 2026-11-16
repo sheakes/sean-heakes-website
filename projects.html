@@ -1,17 +1,96 @@
-<!-- Projects Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Sean Heakes</title>
+    <meta name="description" content="Telescope builds and instrumentation projects by Sean Heakes, from a 21 cm hydrogen radio telescope to a 0.4 m truss Dobsonian.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projects - Sean Heakes">
+    <meta property="og:description" content="Telescope builds and instrumentation projects by Sean Heakes, from a 21 cm hydrogen radio telescope to a 0.4 m truss Dobsonian.">
+    <meta property="og:url" content="https://sheakes.github.io/sean-heakes-website/projects.html">
+    <meta property="og:image" content="https://sheakes.github.io/sean-heakes-website/images/observing_1200.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Projects</h1>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="site-name" href="index.html">Sean Heakes</a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <p>Here are some of the projects I've worked on, from spectral analysis to rocket engineering.</p>
+
+    <main class="wrap">
+        <h1>Projects</h1>
+        <p class="lead">Telescopes and instruments I have built, repaired and tested.</p>
+        <!-- To add a photo to a project, replace its TODO comment with:
+             <figure class="photo-slot"><img src="images/your_photo.jpg" alt="Describe the photo" loading="lazy"><figcaption>Caption</figcaption></figure> -->
+
+        <article class="entry" id="hydrogen-telescope">
+            <h3>Cylindrical parabolic radio telescope</h3>
+            <p class="meta">2024 &ndash; ongoing</p> <!-- TODO: confirm current status -->
+            <!-- TODO: add photo -->
+            <p>I am constructing a cylindrical parabolic radio telescope to perform spectral line observations of 21 cm neutral hydrogen.</p>
+        </article>
+
+        <article class="entry" id="dobsonian">
+            <h3>0.4 m open-truss Dobsonian</h3>
+            <p class="meta">2022 &ndash; ongoing</p> <!-- TODO: confirm current status -->
+            <!-- TODO: add photo -->
+            <p>With the help of the machinists in UBC's Physics and Astronomy Department, I am building an open-truss Dobsonian telescope around an f/4.5, 0.4 m mirror, using designs from <cite>A Practical Manual for Building Large Aperture Telescopes</cite>.</p>
+        </article>
+
+        <article class="entry" id="ritchey-chretien">
+            <h3>0.4 m Ritchey-Chr&eacute;tien refurbishment</h3>
+            <p class="meta">2022 &ndash; ongoing &middot; UBC Astronomy Club</p> <!-- TODO: confirm current status -->
+            <!-- TODO: add photo -->
+            <p>I am coordinating and carrying out the refurbishment of a 0.4 m Optical Guidance Systems Ritchey-Chr&eacute;tien telescope for the UBC Astronomy Club and the UBC Department of Physics and Astronomy, with assistance from the Dominion Astrophysical Observatory in Victoria, BC.</p>
+        </article>
+
+        <article class="entry" id="optical-testing">
+            <h3>Optical testing of refractor telescopes</h3>
+            <p class="meta">2023 &ndash; 2024 &middot; UBC Astronomy Club</p>
+            <!-- TODO: add photo -->
+            <p>I tested the club's refractor telescopes by double-pass autocollimation, using an optical flat and Ronchi gratings to determine their optical quality.</p>
+        </article>
+
+        <article class="entry" id="photogrammetry">
+            <h3>Drone photogrammetry of the John A. Galt telescope</h3>
+            <p class="meta">January &ndash; April 2024 &middot; Dominion Radio Astrophysical Observatory</p>
+            <!-- TODO: add photo -->
+            <p>I led a drone photogrammetry project to model the mechanical characteristics of the 26-metre John A. Galt radio telescope. I fabricated a custom drone and camera bracket, wrote a waypoint generator for drone positioning with geodetic Python packages, and analysed the datasets to model the telescope's distortions at different pointing positions.</p>
+        </article>
+
+        <article class="entry" id="hydrogen-model">
+            <h3>Milky Way hydrogen Doppler model</h3>
+            <p class="meta">2021 &ndash; 2022</p>
+            <!-- TODO: add photo or plot -->
+            <p>Using Python, astronomy packages and open-source radio telescope data at the hydrogen 21 cm wavelength, I wrote a program that models the Doppler shift of hydrogen clouds in the Milky Way at various pointing directions.</p>
+        </article>
+
+        <article class="entry" id="refractor-grant">
+            <h3>Grant for a 140 mm apochromatic refractor</h3>
+            <p class="meta">2021 &middot; UBC Astronomy Club</p>
+            <p>I co-wrote a grant proposal to the UBC Alma Mater Society on behalf of the club for a new 140 mm apochromatic refractor.</p>
+        </article>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span data-year>2026</span> Sean Heakes</p>
+            <p>seanebyheakes1(at)gmail.com &middot; <a href="https://github.com/sheakes">GitHub</a></p>
+        </div>
+    </footer>
 </body>
 </html>

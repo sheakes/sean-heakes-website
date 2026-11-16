@@ -2,16 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Sean Heakes</title>
+    <meta name="description" content="Curriculum vitae of Sean Heakes: research and instrumentation projects, education, work experience and service.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CV - Sean Heakes">
+    <meta property="og:description" content="Curriculum vitae of Sean Heakes: research and instrumentation projects, education, work experience and service.">
+    <meta property="og:url" content="https://sheakes.github.io/sean-heakes-website/cv.html">
+    <meta property="og:image" content="https://sheakes.github.io/sean-heakes-website/images/observing_1200.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Curriculum Vitae</h1>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="site-name" href="index.html">Sean Heakes</a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="cv.html" aria-current="page">CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <p><iframe src="March_15_2025.pdf" width="100%" height="600px"></iframe></p>
-        <p><a href="March_15_2025.pdf" target="_blank">Download CV (PDF)</a></p>
+
+    <main class="wrap">
+        <h1>Curriculum Vitae</h1>
+        <p><a class="button" href="Sean_Heakes_CV.pdf">Download CV (PDF)</a></p>
+        <p class="meta">Last updated March 2025.</p> <!-- TODO: update when the CV changes -->
+
+        <h2>Education</h2>
+        <article class="entry">
+            <h3>B.Sc. Astronomy, University of British Columbia</h3>
+            <p class="meta">September 2021 &ndash; April 2026</p>
+            <p>Select courses: Classical Mechanics (PHYS 216), Introduction to Computational Physics (PHYS 210), Introduction to Electromagnetism (PHYS 301), Mathematical Physics (PHYS 312), Intermediate Experimental Physics II (PHYS 229), Stars and Stellar Populations (ASTR 205), Galaxies (ASTR 300), Vector Calculus (MATH 317), Programming, Problem Solving, and Algorithms (CPSC 203).</p>
+        </article>
+
+        <h2>Academic work experience</h2>
+        <article class="entry">
+            <h3>Astronomy Co-op Student, Dominion Radio Astrophysical Observatory</h3>
+            <p class="meta">July &ndash; December 2024 &middot; Kaleden, BC</p>
+            <ul>
+                <li>Programmed a Python pipeline to convolve a simulated polarized beam response for the 26-metre John A. Galt radio telescope with the Effelsberg-Bonn HI Survey.</li>
+                <li>Designed code to transform relative velocities from the galactic Local Standard of Rest to topocentric reference frames, interpolate large datasets, perform coordinate transforms, and produce figures for a coming series of academic papers.</li>
+            </ul>
+        </article>
+        <article class="entry">
+            <h3>Jr. Mechanical Design Engineer, Dominion Radio Astrophysical Observatory</h3>
+            <p class="meta">January &ndash; April 2024 &middot; Kaleden, BC</p>
+            <ul>
+                <li>Led the development of a drone photogrammetry project to model the mechanical characteristics of the 26-metre John A. Galt radio telescope.</li>
+                <li>Fabricated a custom drone and camera bracket, programmed a drone-positioning waypoint generator using geodetic Python packages, and analysed the datasets to model telescope distortions at various pointing positions.</li>
+            </ul>
+        </article>
+        <article class="entry">
+            <h3>Research Assistant, Thunderbird South Telescope Commissioning</h3>
+            <p class="meta">October 2023 &ndash; April 2024 &middot; UBC, under Prof. Aaron Boley</p>
+            <ul>
+                <li>Operated remote telescope systems, and used automated data-capture shell scripts and Linux astronomy software for image analysis and tracking.</li>
+                <li>Developed skills in troubleshooting optical systems and related hardware failures.</li>
+            </ul>
+        </article>
+
+        <h2>Research and instrumentation projects</h2>
+        <ul>
+            <li><strong>2024 &ndash; ongoing:</strong> Computational model of lunar brightness temperature and solar radiative processes at 5 and 8.6 GHz, with retired solar astronomer Ken Tapping.</li>
+            <li><strong>2024 &ndash; ongoing:</strong> Cylindrical parabolic radio telescope for spectral line observations of 21 cm neutral hydrogen.</li>
+            <li><strong>May 2024:</strong> National Radio Astronomy Observatory Synthesis Imaging Workshop, Socorro, New Mexico.</li>
+            <li><strong>2023 &ndash; 2024:</strong> Optical testing of UBC Astronomy Club refractors by double-pass autocollimation with an optical flat and Ronchi gratings.</li>
+            <li><strong>2022 &ndash; ongoing:</strong> Refurbishment of a 0.4 m Optical Guidance Systems Ritchey-Chr&eacute;tien telescope for the UBC Astronomy Club and Department of Physics and Astronomy, with assistance from the Dominion Astrophysical Observatory.</li>
+            <li><strong>2022 &ndash; ongoing:</strong> Open-truss Dobsonian telescope around an f/4.5, 0.4 m mirror.</li>
+            <li><strong>2021 &ndash; 2022:</strong> Python model of the Doppler shift of Milky Way hydrogen clouds from open-source 21 cm data.</li>
+            <li><strong>2021:</strong> Co-wrote a grant proposal to the UBC Alma Mater Society for a 140 mm apochromatic refractor.</li>
+        </ul>
+        <p>Details are on the <a href="projects.html">projects</a> and <a href="research.html">research</a> pages.</p>
+
+        <h2>Academic service</h2>
+        <article class="entry">
+            <h3>Equipment Coordinator, UBC Astronomy Club</h3>
+            <p class="meta">April 2023 &ndash; present</p> <!-- TODO: confirm end date -->
+            <p>Organizes and maintains the club's telescopes, eyepieces and accessories, and works with other members to write grants for new equipment.</p>
+        </article>
+        <article class="entry">
+            <h3>Astronomy Representative, UBC Science Undergraduate Society</h3>
+            <p class="meta">October 2023 &ndash; October 2024</p>
+            <p>Advocated for astronomy students' academic interests and voted on matters before the body that represents all science students.</p>
+        </article>
+
+        <h2>Certificates</h2>
+        <article class="entry">
+            <h3>Student Machine Shop Course, UBC Physics and Astronomy</h3>
+            <p class="meta">September &ndash; November 2022 &middot; 35 hours</p>
+            <p>Safe operation of the mill, lathe, bandsaw, drill press and bench grinder, with a final project manufacturing high-precision parts in various materials.</p>
+        </article>
+        <article class="entry">
+            <h3>PCB Design and Prototyping, UBC Physics and Astronomy</h3>
+            <p class="meta">January &ndash; March 2023 &middot; 30 hours</p>
+            <p>Schematic capture and PCB layout, generating manufacturing files, assembling boards and testing circuits.</p>
+        </article>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span data-year>2026</span> Sean Heakes</p>
+            <p>seanebyheakes1(at)gmail.com &middot; <a href="https://github.com/sheakes">GitHub</a></p>
+        </div>
+    </footer>
 </body>
 </html>
