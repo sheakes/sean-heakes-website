@@ -1,14 +1,4 @@
-/* Shared styles for every page. Colours and sizes live in the variables below. */
-
-:root {
-    --text: #1c1f23;
-    --muted: #5b6470;
-    --accent: #1f7fb5;
-    --accent-dark: #17618b;
-    --line: #e2e6ea;
-    --surface: #f6f8fa;
-    --column: 720px;
-}
+/* Shared styles for every page. No font is set, so the browser's default serif is used. */
 
 *,
 *::before,
@@ -22,20 +12,10 @@ html {
 
 body {
     margin: 0;
-    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 1.65;
-    color: var(--text);
+    font-size: 17px;
+    line-height: 1.5;
+    color: #111;
     background: #fff;
-}
-
-a {
-    color: var(--accent-dark);
-    text-underline-offset: 2px;
-}
-
-a:hover {
-    color: var(--accent);
 }
 
 img {
@@ -51,18 +31,18 @@ h3 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h2 {
-    font-size: 1.4rem;
-    margin-top: 2.2em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--line);
+    font-size: 1.3rem;
+    margin-top: 1.8em;
+    padding-bottom: 0.15em;
+    border-bottom: 1px solid #999;
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 p,
@@ -71,16 +51,12 @@ ul {
 }
 
 .wrap {
-    max-width: var(--column);
+    max-width: 720px;
     margin: 0 auto;
     padding: 0 16px;
 }
 
 /* Header and navigation */
-
-.site-header {
-    border-bottom: 1px solid var(--line);
-}
 
 .site-header .wrap {
     display: flex;
@@ -88,52 +64,36 @@ ul {
     align-items: baseline;
     justify-content: space-between;
     gap: 4px 24px;
-    padding-top: 16px;
-    padding-bottom: 12px;
+    padding-top: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #999;
 }
 
 .site-name {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 1.15rem;
-    color: var(--text);
+    color: #111;
     text-decoration: none;
 }
 
 .site-nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px 18px;
+    gap: 2px 16px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.site-nav a {
-    display: inline-block;
-    padding: 4px 0;
-    font-size: 0.95rem;
-    color: var(--muted);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-}
-
-.site-nav a:hover {
-    color: var(--text);
-}
-
 .site-nav a[aria-current="page"] {
-    color: var(--text);
-    border-bottom-color: var(--accent);
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
 }
 
 main.wrap {
-    padding-top: 40px;
-    padding-bottom: 56px;
-}
-
-.lead {
-    font-size: 1.1rem;
-    color: var(--muted);
+    padding-top: 28px;
+    padding-bottom: 40px;
 }
 
 /* Home page hero */
@@ -142,96 +102,60 @@ main.wrap {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    margin-bottom: 0.15em;
+    margin-bottom: 0.1em;
 }
 
 .tagline {
     margin: 0;
-    color: var(--muted);
+    font-style: italic;
 }
 
 .star-toggle {
     flex: none;
     padding: 0;
     border: 0;
-    border-radius: 50%;
     background: none;
     cursor: pointer;
     line-height: 0;
 }
 
 .star-toggle:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 3px;
+    outline: 2px solid #00e;
+    outline-offset: 2px;
 }
 
 .avatar {
-    width: 132px;
-    height: 132px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
+    border: 1px solid #999;
 }
 
 .star-hint {
-    margin: 6px 0 0;
+    margin: 2px 0 0;
     font-size: 0.8rem;
-    color: var(--muted);
-}
-
-/* Cards on the home page */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    padding: 0;
-    list-style: none;
-}
-
-.card {
-    display: block;
-    height: 100%;
-    padding: 16px;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    color: inherit;
-    text-decoration: none;
-}
-
-.card:hover {
-    border-color: var(--accent);
-    color: inherit;
-}
-
-.card h3 {
-    color: var(--accent-dark);
-    margin-bottom: 0.3em;
-}
-
-.card p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--muted);
+    color: #555;
 }
 
 /* Project, research and CV entries */
 
 .entry {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .entry h3 {
-    margin-bottom: 0.15em;
+    margin-bottom: 0.1em;
 }
 
 .meta {
-    margin: 0 0 0.5em;
-    font-size: 0.9rem;
-    color: var(--muted);
+    margin: 0 0 0.4em;
+    font-size: 0.92rem;
+    font-style: italic;
+    color: #444;
 }
 
 .photo-slot {
@@ -240,7 +164,6 @@ main.wrap {
 
 .photo-slot img {
     display: block;
-    border-radius: 6px;
 }
 
 figure {
@@ -248,9 +171,9 @@ figure {
 }
 
 figcaption {
-    margin-top: 6px;
-    font-size: 0.9rem;
-    color: var(--muted);
+    margin-top: 4px;
+    font-size: 0.92rem;
+    font-style: italic;
 }
 
 /* Gallery */
@@ -264,7 +187,6 @@ figcaption {
 .gallery img {
     display: block;
     width: 100%;
-    border-radius: 6px;
 }
 
 /* About page portrait */
@@ -272,40 +194,24 @@ figcaption {
 .portrait {
     float: right;
     width: 200px;
-    margin: 0 0 16px 24px;
-    border-radius: 8px;
-}
-
-.button {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: var(--accent-dark);
-    color: #fff;
-    text-decoration: none;
-}
-
-.button:hover {
-    background: var(--accent);
-    color: #fff;
+    margin: 0 0 12px 20px;
+    border: 1px solid #999;
 }
 
 /* Footer */
 
 .site-footer {
-    border-top: 1px solid var(--line);
-    background: var(--surface);
     font-size: 0.9rem;
-    color: var(--muted);
 }
 
 .site-footer .wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 4px 24px;
-    padding-top: 20px;
+    gap: 2px 24px;
+    padding-top: 10px;
     padding-bottom: 20px;
+    border-top: 1px solid #999;
 }
 
 .site-footer p {
@@ -347,27 +253,19 @@ figcaption {
 }
 
 @media (max-width: 520px) {
-    body {
-        font-size: 17px;
-    }
-
     .site-nav ul {
-        gap: 2px 13px;
-    }
-
-    .site-nav a {
-        font-size: 0.88rem;
+        gap: 2px 12px;
     }
 
     .hero {
         flex-direction: column;
         align-items: flex-start;
-        gap: 12px;
+        gap: 10px;
     }
 
     .portrait {
         float: none;
         display: block;
-        margin: 0 0 16px;
+        margin: 0 0 12px;
     }
 }
