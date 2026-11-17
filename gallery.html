@@ -4,74 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Sean Heakes</title>
+    <meta name="description" content="Photos from Sean Heakes's observing, telescope projects and travels.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gallery - Sean Heakes">
+    <meta property="og:description" content="Photos from Sean Heakes's observing, telescope projects and travels.">
+    <meta property="og:url" content="https://sheakes.github.io/sean-heakes-website/gallery.html">
+    <meta property="og:image" content="https://sheakes.github.io/sean-heakes-website/images/observing_1200.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px;
-            line-height: 1.8;
-            margin: 20px;
-            text-align: center;
-            overflow-y: auto; /* Enables vertical scrolling */
-        }
-        h1 {
-            font-size: 36px;
-        }
-        h2 {
-            font-size: 30px;
-        }
-        section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding-bottom: 60px; /* Adds more spacing between sections */
-        }
-        figure {
-            margin: 40px auto;
-            max-width: 500px; /* Reduce max width of images */
-        }
-        img {
-            width: 100%; /* Ensure images scale properly */
-            max-width: 500px; /* Shrink images further */
-            height: auto;
-            border-radius: 5px;
-            display: block;
-            margin: 0 auto;
-        }
-        figcaption {
-            font-size: 20px;
-            margin-top: 15px;
-        }
-        footer {
-            margin-top: 60px;
-            padding: 25px;
-            background: #f4f4f4;
-            font-size: 20px;
-        }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Gallery</h1>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="site-name" href="index.html">Sean Heakes</a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>Research and Travel Photography</h2>
+
+    <main class="wrap">
+        <h1>Gallery</h1>
+        <p>Photos from observing nights, telescope projects and travels.</p>
+        <!-- To add a photo: save it in images/ (about 1200px on the long side keeps pages fast),
+             then copy this block inside the gallery div below:
+             <figure>
+                 <img src="images/your_photo.jpg" alt="Describe the photo" loading="lazy">
+                 <figcaption>Caption</figcaption>
+             </figure> -->
+        <div class="gallery">
             <figure>
-                <img src="images/research_figure1.jpg" alt="Research image 1">
-                <figcaption>Analysis of spectral line data in radio astronomy.</figcaption>
+                <img src="images/observing_1200.jpg" alt="Sean Heakes adjusting a white refractor telescope under a dark blue evening sky, lit by a red headlamp" width="800" height="1200">
+                <figcaption>Setting up a refractor for a night of observing.</figcaption> <!-- TODO: add where and when -->
             </figure>
-            <figure>
-                <img src="images/research_figure2.jpg" alt="Research image 2">
-                <figcaption>Experimental setup for atmospheric modeling.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/research_figure3.jpg" alt="Research image 3">
-                <figcaption>Fieldwork observations from a remote observatory.</figcaption>
-            </figure>
-        </section>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Sean Heakes. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span data-year>2026</span> Sean Heakes</p>
+            <p>seanebyheakes1(at)gmail.com &middot; <a href="https://github.com/sheakes">GitHub</a></p>
+        </div>
     </footer>
 </body>
 </html>

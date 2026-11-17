@@ -1,17 +1,73 @@
-<!-- Research Page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Sean Heakes</title>
+    <meta name="description" content="Research by Sean Heakes in radio astronomy: lunar brightness temperature modelling, beam convolution at DRAO, and telescope commissioning.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Research - Sean Heakes">
+    <meta property="og:description" content="Research by Sean Heakes in radio astronomy: lunar brightness temperature modelling, beam convolution at DRAO, and telescope commissioning.">
+    <meta property="og:url" content="https://sheakes.github.io/sean-heakes-website/research.html">
+    <meta property="og:image" content="https://sheakes.github.io/sean-heakes-website/images/observing_1200.jpg">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Research</h1>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="site-name" href="index.html">Sean Heakes</a>
+            <nav class="site-nav" aria-label="Main">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="research.html" aria-current="page">Research</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <p>My research focuses on spectral line absorption, atmospheric modeling, and radio astronomy signal processing.</p>
+
+    <main class="wrap">
+        <h1>Research</h1>
+        <p>My research interests are in radio astronomy, atmospheric modeling and signal processing.</p>
+
+        <article class="entry" id="lunar-model">
+            <h3>Lunar brightness temperature model</h3>
+            <p class="meta">2024 &ndash; ongoing &middot; with Ken Tapping</p> <!-- TODO: confirm current status -->
+            <!-- TODO: add figure -->
+            <p>I am developing a computational model to simulate the Moon's brightness temperature and solar radiative processes at 5 and 8.6 GHz, working with retired solar astronomer Ken Tapping.</p>
+        </article>
+
+        <article class="entry" id="beam-convolution">
+            <h3>Polarized beam convolution for the John A. Galt telescope</h3>
+            <p class="meta">July &ndash; December 2024 &middot; Dominion Radio Astrophysical Observatory</p>
+            <!-- TODO: add figure -->
+            <p>As an astronomy co-op student I programmed a Python pipeline that convolves a simulated polarized beam response for the 26-metre John A. Galt radio telescope with the Effelsberg-Bonn HI Survey.</p>
+            <p>I also wrote code to transform velocities from the galactic Local Standard of Rest to topocentric reference frames, interpolate large datasets and perform coordinate transforms, and produced figures intended for a series of academic papers.</p>
+        </article>
+
+        <article class="entry" id="thunderbird-south">
+            <h3>Thunderbird South telescope commissioning</h3>
+            <p class="meta">October 2023 &ndash; April 2024 &middot; UBC, under Prof. Aaron Boley</p>
+            <p>As a research assistant I operated remote telescope systems, used automated data-capture shell scripts and Linux astronomy software for image analysis and tracking, and troubleshot optical systems and related hardware failures.</p>
+        </article>
+
+        <article class="entry" id="synthesis-workshop">
+            <h3>NRAO Synthesis Imaging Workshop</h3>
+            <p class="meta">May 2024 &middot; Socorro, New Mexico</p>
+            <p>I attended the National Radio Astronomy Observatory's Synthesis Imaging Workshop, covering interferometry and data analysis.</p>
+        </article>
     </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span data-year>2026</span> Sean Heakes</p>
+            <p>seanebyheakes1(at)gmail.com &middot; <a href="https://github.com/sheakes">GitHub</a></p>
+        </div>
+    </footer>
 </body>
 </html>
